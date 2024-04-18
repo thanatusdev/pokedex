@@ -7,6 +7,11 @@ export async function getPokemon({ query = "" }: { query: string }) {
 
   try {
     const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      return null;
+    }
+
     const data = await response.json();
 
     data.pokemon.abilities.sort((a: any, b: any) =>

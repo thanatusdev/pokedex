@@ -7,6 +7,10 @@ export async function GET(request: Request) {
     },
   });
 
+  if (!res.ok) {
+    return Response.json({ error: "Pokemon not found" }, { status: 404 });
+  }
+
   const pokemon = await res.json();
 
   return Response.json({ pokemon });
