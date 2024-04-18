@@ -19,7 +19,7 @@ export default async function Home({
   return (
     <main className="max-w-[1500px] w-[95%] mx-auto">
       <Search search={search} />
-      <ul>
+      <ul data-testid="pokedex">
         <Pokedex search={search} pokemon={pokemon} />
       </ul>
     </main>

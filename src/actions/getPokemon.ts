@@ -22,7 +22,6 @@ export async function getPokemon({ query = "" }: { query: string }) {
 
     return data.pokemon;
   } catch (error) {
-    console.log(error);
     return null;
   }
 }
@@ -32,7 +31,6 @@ export async function fetchPokemon({ search = "" }: { search?: string }) {
     const pokemonData = await getPokemon({ query: search });
     return pokemonData;
   } catch (error) {
-    console.log(error);
     return null;
   }
 }
