@@ -30,10 +30,7 @@ const Search = ({ search }: { search?: string }) => {
         type="text"
         value={text}
         placeholder="Search Pokemon..."
-        onChange={(e) => {
-          console.log(e.target.value);
-          setText(e.target.value);
-        }}
+        onChange={(e) => setText(e.target.value)}
         className="block w-full rounded-md border-0 py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:outline-yellow-500 sm:text-sm sm:leading-6 mb-10"
       />
     </div>
