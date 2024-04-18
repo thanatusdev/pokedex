@@ -9,6 +9,7 @@ export default async function Home({
     [key: string]: string | string[] | undefined;
   };
 }) {
+  console.log(searchParams);
   const search =
     typeof searchParams.search === "string" ? searchParams.search : "";
 

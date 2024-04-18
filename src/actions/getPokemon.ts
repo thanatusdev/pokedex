@@ -1,5 +1,7 @@
 "use server";
 
+import { Ablility } from "@/src/components/Card";
+
 export async function getPokemon({ query = "" }: { query: string }) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
@@ -14,7 +16,7 @@ export async function getPokemon({ query = "" }: { query: string }) {
 
     const data = await response.json();
 
-    data.pokemon.abilities.sort((a: any, b: any) =>
+    data.pokemon?.abilities?.sort((a: Ablility, b: Ablility) =>
       a.ability.name.localeCompare(b.ability.name)
     );
 
